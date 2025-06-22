@@ -13,7 +13,4 @@ if (!defined('constantsLoadedBlog')) {
     define('blog_entryImg_web_width', 1024);
     define('blog_entryImg_web_height', 768);
     define('blog_defaultImg', __DIR__ . "/../../templates/default_blog_img.jpg");
-
-    include_once __DIR__ . "/constants_web.php";
-    include_once __DIR__ . "/constants_admin.php";
 }
