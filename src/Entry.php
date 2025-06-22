@@ -1,6 +1,6 @@
 <?php
 
-namespace Leedch\Blog\Blog;
+namespace Leedch\Blog;
 
 use Leedch\Mysql\Mysql;
 
