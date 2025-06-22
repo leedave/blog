@@ -12,5 +12,5 @@ if (!defined('constantsLoadedBlog')) {
     define('blog_entryImgPrev_web_height', 120);
     define('blog_entryImg_web_width', 1024);
     define('blog_entryImg_web_height', 768);
-    define('blog_defaultImg', __DIR__ . "/../../templates/default_blog_img.jpg");
+    define('blog_defaultImg', __DIR__ . "/../../templates/web/default_blog_img.jpg");
 }
