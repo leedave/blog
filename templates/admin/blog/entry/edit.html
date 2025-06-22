@@ -1,0 +1,66 @@
+<h2>{{$TITLE}}</h2>
+<a href="/blog/entries/{{$BLOGID}}/">{{t:nav.back}}</a>
+<div class="blog entry_column">
+<form action="/blog/entry/edit/{{$BLOGID}}/{{$ID}}" method="post" id="newBlogForm" enctype="multipart/form-data">
+    <input type="hidden" name="blogId" value="{{$BLOGID}}" />
+    <input type="hidden" name="id" value="{{$ID}}" />
+    <fieldset>
+        <legend>{{t:legend.blogData}}</legend>
+        <div class="twocolumn">
+            <div class="column">
+                <div class="row">
+                    <span class="label"><label for="subject">{{t:label.blog.entry.subject}}</label></span>
+                    <span class="input"><input type="text" name="subject" id="subject" value="{{$SUBJECT}}" /></span>
+                </div>
+                <div class="row">
+                    <span class="label"><label for="content">{{t:label.blog.entry.content}}</label></span>
+                    <span class="input">
+                        <textarea id="content" name="content" class="wysiwyg">{{$CONTENT}}</textarea>
+                    </span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="row">
+                    <span class="label">
+                        <label for="img">{{t:label.blog.entry.img}}</label>
+                    </span>
+                    <span class="input">
+                        <span class="image">{{$IMAGE}}</span>
+                        <input type="file" name="img" accept=".jpg, .jpeg, .png" />
+                    </span>
+                </div>
+                <div class="row">
+                    <span class="label">
+                        <input type="checkbox" name="allowComments" id="allowComments" value="1" {{$CHECKEDALLOWCOMMENTS}}/>
+                        <label for="allowComments">{{t:label.blog.entry.allowComments}}</label>
+                    </span>
+                </div>
+                <div class="row">
+                    <span class="label">
+                        <input type="checkbox" name="pinned" id="pinned" value="1" {{$CHECKEDPINNED}}/>
+                        <label for="pinned">{{t:label.blog.entry.pinned}}</label>
+                    </span>
+                </div>
+                <div class="row">
+                    <span class="label"><label for="tags">{{t:label.blog.entry.tags}}</label></span>
+                    <span class="input">
+                        <input type="text" name="tags" id="tags" value="{{$TAGS}}" />
+                    </span>
+                </div>
+            </div>            
+        </div>
+    </fieldset>
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <button type="submit" class="save cta">{{t:button.blog.submit}}</button>
+    </div>
+</form>
+<script type="text/javascript"><!--  
+    
+    let description = new Wysiwyg('newBlogForm');
+    description.init();
+    
+    let blog = new Blog();
+    blog.initTagEditor('tags');
+--></script>
+</div>

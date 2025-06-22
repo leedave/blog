@@ -1,0 +1,12 @@
+<tr>
+    <td class="id">{{$ID}}</td>
+    <td>{{$NAME}}</td>
+    <td class="wysiwygPrev">{{$DESCRIPTION}}</td>
+    <td>{{$OWNER}}</td>
+    <td class="datetime">{{$CREATEDATE}}</td>
+    <td class="linkIcons">
+        <a href="/blog/edit/{{$ID}}" class="clickIcon"><i class="fa fa-edit"></i><span class="label">{{t:label.edit}}</span></a> 
+        <a href="/blog/entries/{{$ID}}" class="clickIcon"><i class="fa fa-copy"></i><span class="label">{{t:label.blog.entries}}</span></a> 
+        <a href="javascript:deleteEntry({{$ID}}, '{{$NAME}}')" class="clickIcon delete"><i class="fa fa-trash-alt"></i><span class="label">{{t:label.delete}}</span></a>
+    </td>
+</tr>

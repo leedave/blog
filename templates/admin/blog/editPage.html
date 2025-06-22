@@ -1,0 +1,32 @@
+<h2>{{$TITLE}}</h2>
+<div class="blog column">
+<form action="/blog/edit/" method="post" id="newBlogForm" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{{$ID}}" />
+    <fieldset>
+        <legend>{{t:legend.blogData}}</legend>
+        <div class="twocolumn">
+            <div class="column">
+                <div class="row">
+                    <span class="label">{{t:label.blog.name}}</span>
+                    <span class="input"><input type="text" name="name" id="name" value="{{$NAME}}" /></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <span class="label">{{t:label.blog.description}}</span>
+            <span class="input">
+                <textarea id="description" name="description" class="wysiwyg">{{$DESCRIPTION}}</textarea>
+            </span>
+        </div>
+    </fieldset>
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <button type="submit" class="save cta">{{t:button.blog.submit}}</button>
+    </div>
+</form>
+<script type="text/javascript"><!--  
+    
+    let description = new Wysiwyg('newBlogForm');
+    description.init();
+--></script>
+</div>

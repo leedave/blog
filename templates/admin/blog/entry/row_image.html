@@ -1,0 +1,15 @@
+<div class="blogEntry">
+    <div class="blogEntryRow">
+        <div class="subject">{{$SUBJECT}} <span class="datetime">{{$DATETIME}}</span></div>
+        <div class="content">{{$CONTENT}}</div>
+        <div class="metadata">
+            {{$CREATOR}}
+            {{$PINNED}}
+            {{$ALLOWCOMMENTS}}
+        </div>
+    </div>
+    <div class="blogEntryOptions linkIcons">
+        <a href="/blog/entry/edit/{{$BLOGID}}/{{$ID}}" class="clickIcon"><i class="fa fa-edit"></i> {{t:a.blog.entry.edit}}</a>
+        <a href="javascript:deleteEntry({{$ID}}, {{$BLOGID}}, '{{$SUBJECT}}')" class="clickIcon delete"><i class="fa fa-trash"></i> {{t:a.blog.entry.delete}}</a>
+    </div>
+</div>

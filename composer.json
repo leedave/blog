@@ -1,0 +1,34 @@
+{
+    "name": "leedch/blog",
+    "type": "library",
+    "description": "Routes HTTP Requests to PHP methods, alternate to MVC Controllers",
+    "keywords": [
+        "leedch",
+        "blog"
+    ],
+    "homepage": "https://github.com/leedave/blog.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Lee",
+            "email": "leed@leed.ch",
+            "homepage": "https://www.leed.ch/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~8.2|~8.3|~8.4",
+        "leedch/resource-mysql": "^1.0",
+        "leedch/filehandler": "^2.0",
+        "leedch/convert": "^1.0",
+        "leedch/view": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leedch\\Blog\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

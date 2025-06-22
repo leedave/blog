@@ -1,0 +1,43 @@
+<h2>{{$TITLE}}</h2>
+<div class="blog column">
+    <a href="/blog/">{{t:nav.back}}</a>
+<fieldset>
+    <legend>{{t:legend.blogData}}</legend>
+    <div class="twocolumn">
+        <div class="column">
+            <div class="row">
+                <span class="label">{{t:label.blog.name}}</span>
+                <span class="input">{{$NAME}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <span class="label">{{t:label.blog.description}}</span>
+        <span class="input">
+            {{$DESCRIPTION}}
+        </span>
+    </div>
+</fieldset>
+    <fieldset>
+        <legend>{{t:legend.blog.actions}}</legend>
+        <div class="column">
+            <div class="row">
+                <a href="/blog/entry/edit/{{$ID}}/0" class="link">{{t:a.blog.entry.create}}</a>
+            </div>
+        </div>
+    </fieldset>
+<fieldset>
+    <legend>{{t:legend.blog.entries}}</legend>
+    <div class="blogEntries">
+        {{$ENTRIES}}
+    </div>
+</fieldset>   
+<script type="text/javascript"><!--  
+    function deleteEntry(id, blogId, name) 
+    {
+        if (confirm("{{t:confirm.deleteBlog.entry.1}} "+name+" {{t:confirm.deleteBlog.entry.2}}")) {
+            window.location =  '/blog/entry/delete/' + blogId + '/' + id;
+        }
+    }
+--></script>
+</div>

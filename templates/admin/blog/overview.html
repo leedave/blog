@@ -1,0 +1,29 @@
+<h2>{{t:title.blog.overview}}</h2>
+<div class="newFormTrigger">
+    <a href="/blog/edit/0">{{t:link.blog.create}}</a>
+</div>
+<div class="navTable">
+    <table class="users">
+        <thead class="notMobile">
+            <tr>
+                <th class="id">{{t:label.blog.th.id}}</th>
+                <th>{{t:label.blog.th.name}}</th>
+                <th>{{t:label.blog.th.description}}</th>
+                <th>{{t:label.blog.th.owner}}</th>
+                <th class="datetime">{{t:label.blog.th.createdOn}}</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+            {{$TABLE}}
+        </tbody>
+    </table>
+</div-->
+<script type="text/javascript"><!--  
+    function deleteEntry(id, name) 
+    {
+        if (confirm("{{t:confirm.deleteBlog.1}} "+name+" {{t:confirm.deleteBlog.2}}")) {
+            window.location =  '/blog/delete/'+id;
+        }
+    }
+--></script>
