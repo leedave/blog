@@ -1,8 +1,8 @@
 <?php
 
-namespace Leedch\Leedch\Blog\Entry;
+namespace Leedch\Blog\Blog\Entry;
 
-use Leedch\Leedch\Blog\Entry;
+use Leedch\Blog\Blog\Entry;
 use Leedch\Filehandler\Image as ParentImage;
 
 /**
