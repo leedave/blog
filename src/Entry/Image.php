@@ -2,7 +2,7 @@
 
 namespace Leedch\Blog\Entry;
 
-use Leedch\Blog\Blog\Entry;
+use Leedch\Blog\Entry;
 use Leedch\Filehandler\Image as ParentImage;
 
 /**
